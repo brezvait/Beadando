@@ -1,4 +1,23 @@
-#main {
+#top {
 	margin: auto;
+	border: 1px solid #000000;
 	
+}
+#menu {
+	margin: auto;
+	background-color: #CCDDEE;
+	height: 20px;
+	width: 600px;
+	border: 1px solid #000000;
+}
+#menu ul {
+	list-style-type: none;
+	margin: auto;
+	padding: 0;
+	vertical-align: middle;
+}
+#menu ul li {
+	display: inline;
+	padding-left: 20px;
+	padding-right: 20px;
 }
