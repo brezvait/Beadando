@@ -1,22 +1,63 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Teszt</title>
-<link rel="stylesheet" href="css/style.css" />
-<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Web technológiák</title>
+<link rel="stylesheet" href="./css/style.css" />
+<!-- <link rel="stylesheet" href="./css/bootstrap.css" />  -->
+<script type="text/javascript" src="./js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(
+			function(){
+				$('#menu li a').each(function(){
+					$(this).click(function(event){
+						event.preventDefault();
+						$('#cont').load($(this).attr('href'));	
+					});
+				$('#cont').load('content1.html');
+				});
+			});
+	
+	$.getJSON('pics.json', function(data) {
+		$.each(data, function(key, val) {
+			$('#rightbox').append(
+					'<div class="newsItem"><img border="0" src="'
+							+ val['picture'] + '" /></div><div class="newsItemHeader">'
+							+ val['title']
+							+ '</div>');
+		});
+	});
+	
+</script>
 </head>
 <body>
-<div id="top">
-	<div id="menu">
-		<ul>
-			<li>Menu1</li>
-			<li>Menu2</li>
-			<li>Menu3</li>
-			<li>Menu4</li>
-		</ul>
+<div class="container">
+	<div class="row">
+	<div id="top"></div>
+	</div>
+	<div class="teszt">
+			<div id="menu">
+				<ul>
+					<li class="col-md-3"><a href="./content1.html">A hóbagoly</a></li>
+					<li class="col-md-3"><a href="./content2.html">Megjelenése</a></li>
+					<li class="col-md-3"><a href="./content3.html">Hangja</a></li>
+					<li class="col-md-3"><a href="./content4.html">Életmódja</a></li>
+				</ul>
+			</div>		
+	</div>
+		<div class="row">
+			<div id="main">			
+				<div id="cont"></div>
+				<div id="rightbox"></div>
+			</div>
+	</div>
+	<div class="row">
+		<div class="footer">
+			<div class="col-md-6 left">Brezvai Tamás - NK: XYSZKX</div>
+			<div class="col-md-6 right">Az oldal adatait a Wikipedia szolgáltatta.</div>
+		</div>
 	</div>
 </div>
-<div id="main">Content</div>
 </body>
 </html>

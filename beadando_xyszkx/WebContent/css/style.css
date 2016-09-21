@@ -1,23 +1,81 @@
 #top {
 	margin: auto;
-	border: 1px solid #000000;
-	
+	/*border: 1px solid #000000;*/
+	max-width: 900px;
+	background-image: url('../img/owlheader900.jpg');
+	background-repeat: no-repeat;
+	min-height: 100px;
 }
-#menu {
+.teszt {
+	max-width: 900px;
+	min-height: 40px;
 	margin: auto;
-	background-color: #CCDDEE;
-	height: 20px;
-	width: 600px;
-	border: 1px solid #000000;
+}
+#menu {	
+	/*border: 1px solid #000000;*/
+	font-family: Arial;
+	text-align: center;
+	min-height: 40px;
 }
 #menu ul {
 	list-style-type: none;
-	margin: auto;
-	padding: 0;
-	vertical-align: middle;
 }
 #menu ul li {
 	display: inline;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding: 10px 50px;
+	border: 1px solid #000000;
+	border-radius: 5px;
+	height: 40px;
+	width: 215px;
+	vertical-align: middle;
+	background-color: #CCDDEE;
+}
+#menu a {
+	color: #000000;
+	text-decoration: underline;
+}
+#menu a:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+#main {
+	border: 1px dotted #000000;
+	border-radius: 5px;
+	height: 600px;
+	width: 900px;
+	margin: auto;
+	font-family: Arial;
+}
+#cont {
+	width: 600px;
+	height: 600px;
+	/*border: 1px solid red;*/
+	float: left;
+	text-align: justify;
+}
+#rightbox {
+	width: 290px;
+	height: 600px;
+	/*border: 1px solid green;*/
+	float: right;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.footer {
+	background-color: #000000;
+	font-style: italic;
+	font-family: Arial;
+	color: #FFFFFF;
+	width: 900px;
+	height: 40px;
+	margin: auto;
+	padding: 10px;
+}
+.left {
+	text-align: left;
+}
+.right {
+	text-align: right;
+
 }
